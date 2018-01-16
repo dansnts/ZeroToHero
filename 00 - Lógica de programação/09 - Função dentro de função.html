@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Two at one</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Two at one</h1>
+        <script>
+            // Função pula linha
+            var pulaLinha = function() {
+                document.write("<hr><br>");
+            };
+            
+            // Mostrar frase
+            var mostra = function(frase) {
+                document.write("<big>" + frase + "</big>");
+                pulaLinha();
+            }
+            
+            var year = 2018;
+            mostra("Eu nasci em: " + (year - 23));
+            mostra("Mamis nasceu em: " + (year - 50));
+            mostra("Kolene nasceu em: " + (year - 16));
+        </script>
+	</body>
+</html>

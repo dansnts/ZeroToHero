@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>IMC</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>IMC</h1>
+        <script>
+            // Função pula linha
+            var pulaLinha = function() {
+                document.write("<br>");
+            };
+            
+            // Mostrar frase
+            var mostra = function(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+            
+            // Calcula IMC
+            var calculaIMC = function(altura, peso) {
+                var imc = peso / (altura * altura);
+                return imc.toFixed(2);
+            }
+            
+            var peso = 56;
+            var altura = 1.73;
+            var totalIMC = calculaIMC(altura, peso);
+            mostra("Meu IMC é de: " + totalIMC);
+            mostra("Ainda estou " + (totalIMC - 18.5) + " pontos acima do limite da magreza ");
+            mostra("e " + (35 - totalIMC) + " pontos distante da obesidade severa.");
+        </script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Calcula consumo</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Etanol ou gasolina?</h1>
+        <script>
+            var tanque = 40;
+            var caminhoPercorGasol = 480;
+            var caminhoPercorEtanol = 300;
+            var consumoGasolina = tanque / caminhoPercorGasol;
+            var consumoEtanol = tanque / caminhoPercorEtanol;
+            
+            document.write("GASOLINA <br>")
+            document.write ("Caminho percorrido com gasolina: " + caminhoPercorGasol + " KM <br>");
+            document.write ("Litros do tanque do carro: " + tanque + "<br>");
+            document.write ("Consumo com gasolina é de: " + consumoGasolina.toFixed(2) + " litros <br><br>");
+        
+            document.write("ETANOL <br>")
+            document.write ("Caminho percorrido com etanol: " + caminhoPercorEtanol + " KM <br>");
+            document.write ("Litros do tanque do carro: " + tanque + "<br>");
+            document.write ("Consumo com gasolina é de: " + consumoEtanol.toFixed(2) + " litros <br><br>");
+            
+            document.write("PREÇO POR KM <br>")
+            var precoDoEtanol = 2.40;
+            var precoDaGasolina = 2.90;
+            var precoKMEt = precoDoEtanol / consumoEtanol;
+            var precoKMGas = precoDaGasolina / consumoGasolina;
+                
+            document.write("= ETANOL - R$2.40 | GASOLINA - R$2.90 =<br>")
+            document.write(" KM/L Etanol: " + precoKMEt +"<br>")
+            document.write("KM/L Gasolina: " + precoKMGas.toFixed(2) +"<br>")
+        </script>
+	</body>
+</html>
