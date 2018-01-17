@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Dados vitais</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Dados vitais</h1>
+        <script>
+            // Função que calcula os dias de vida
+            var calculaDiasDeVida = function(idade) {
+                return idade * 365;
+            }
+            
+            // Função que calcula os batimentos do coração
+            var calculaBatimentos = function (dias) {
+                return dias * 24 * 60 * 80;
+            }
+            
+            
+            var idade = prompt("Quantos anos você tem?");
+            var dias = calculaDiasDeVida(idade);
+            var batimentos = calculaBatimentos(dias);
+            document.write("Você já viveu " + dias + " dias de vida. <br>");
+            document.write("Seu coração já bateu " + batimentos + " vezes. Haja coração!");
+        </script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Ordem das functions</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Ordem das functions</h1>
+        <h3>Ver console para mais info</h3>
+        <script>
+            var primeira = function() {
+                console.log("1 - antes");
+                segunda();
+                console.log("1 - depois");
+            }
+            
+            var segunda = function() {
+                console.log("2 - antes");
+                terceira();
+                console.log("2 - depois");
+            }
+            
+            var terceira = function() {
+                console.log("3");
+            }
+            
+            primeira();
+        </script>
+	</body>
+</html>
