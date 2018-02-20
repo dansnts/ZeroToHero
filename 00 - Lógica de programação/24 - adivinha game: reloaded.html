@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Game Adivinha: Reloaded</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Game Adivinha: Reloaded</h1>
+				<h2>Com tentativas para aporrinhar a sua vida!</h2>
+        <script>
+						// Mostrar frase
+						var mostra = function(frase) {
+								document.write(frase + "<br>");
+						}
+
+						// Gera um número randômico
+						var numeroPensado = Math.round(Math.random() * 100);
+
+						var numTentativa = 1;
+						while(numTentativa <= 3) {
+							var chute = prompt("Já pensei. Qual número você acha que é?");
+
+							if (isNaN(chute)) {
+								alert("Oops! Apenas números são válidos!");
+							} else if (chute == numeroPensado) {
+								alert("Parabéns, você acertou!");
+								break;
+							} else {
+								alert("Você errou! Try again");
+							}
+
+							// Mostrar se o número que o usuário chutou era
+							// maior ou menor ao número pensado pelo programa
+
+							if (chute > numeroPensado) {
+								mostra ("O número " + chute + " foi maior que o número pensado por mim =D")
+							} else if (chute < numeroPensado) {
+								mostra ("O número " + chute + " foi menor que o número pensado por mim =D")
+							}
+
+							numTentativa++;
+						}
+        </script>
+	</body>
+</html>

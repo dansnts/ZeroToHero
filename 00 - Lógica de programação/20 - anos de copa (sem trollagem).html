@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Anos de copa</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Anos de copa</h1>
+        <script>
+            // Mostrar frase
+            var mostra = function(frase) {
+                document.write(frase + "<br>");
+            }
+
+						var userAnoDeCopa = prompt("Digite ano para saber se haverá copa do mundo: ");
+						var anoDeCopa = parseInt(userAnoDeCopa);
+						var anoLimite = prompt("Qual é o ano limite? ");
+						while (anoDeCopa <= anoLimite) {
+							mostra(anoDeCopa + " tem copa!");
+							anoDeCopa = anoDeCopa + 4;
+							mostra(anoDeCopa + " esse é o valor após a soma!");
+						}
+
+							mostra("Ufa! Esses foram os anos de copa até " + anoLimite + ".")
+        </script>
+	</body>
+</html>

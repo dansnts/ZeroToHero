@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Game Adivinha</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Game Adivinha</h1>
+        <script>
+            // Função pula linha
+            var pulaLinha = function() {
+                document.write("<br>");
+            };
+
+            // Mostrar frase
+            var mostra = function(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+
+						// Função sorteia (wip)
+						var sorteia = function(){
+
+						}
+
+						// Gera um número randômico
+						var numeroPensado = Math.round(Math.random() * 100);
+
+
+						var chute = prompt("Já pensei. Qual número você acha que é?")
+						if (isNaN(chute)) {
+							mostra("Oops! Apenas números são válidos!");
+						} else if (chute == numeroPensado) {
+							mostra("Uau! Você acertou, pois eu pensei no número " + numeroPensado);
+						} else {
+							mostra("Você errou! Eu tinha pensado no número " + numeroPensado);
+						}
+
+						// Mostrar se o número que o usuário chutou era
+						// maior ou menor ao número pensado pelo programa
+
+						if (chute > numeroPensado) {
+							mostra ("O número " + chute + " foi maior que o número pensado por mim =D")
+						} else if (chute < numeroPensado) {
+							mostra ("O número " + chute + " foi menor que o número pensado por mim =D")
+						}
+        </script>
+	</body>
+</html>

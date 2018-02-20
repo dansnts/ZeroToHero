@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Futebol e seus pontos</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Futebol e seus pontos</h1>
+
+				<!--p>
+				Nesse momento, temos um arquivo chamado pontos_futebol.html , que descobre a
+				situação do nosso time no campeonato de futebol. Vamos rever o código. Ele começa
+				declarando as duas funções que utilizamos bastante:
+				<script>
+				var pulaLinha = function() {
+					document.write("<br>");
+				};
+
+				var mostra = function(frase) {
+					document.write(frase);
+					pulaLinha();
+				};
+
+				Perguntamos para o usuário a quantidade de vitórias e empates do time através
+				da função prompt :
+					var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+					var empates = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+
+				Em seguida, calculamos a quantidade de pontos, considerando que cada vitória
+				vale 3 pontos e cada empate vale 1 ponto:
+					var pontos = (vitorias * 3) + parseInt(empates);
+
+				Vamos considerar que o outro time, Livros Velhos, está com 28 pontos. Preci-
+				samos então fazer o nosso programa mostrar se estamos na frente em número de
+				pontos, atrás ou empatados. Para realizar essas condições, usamos o if :
+
+				var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?");
+				var empates = prompt("Quantos jogos o CDC Futebol Clube empatou?");
+				var pontos = (vitorias * 3) + parseInt(empates);
+
+				if(pontos > 28) {
+					mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+				}
+
+				if(pontos < 28) {
+					mostra("Nosso time está indo PIOR que o Livros Velhos!");
+				}
+
+				if(pontos == 28) {
+					mostra("Nosso time está EMPATADO com o Livros Velhos!");
+				}
+				</script>
+
+				Agora podemos incrementar ainda mais o nosso programa que compara os dois
+				times no campeonato. Faça as alterações a seguir:
+
+				1) Nesse momento, o número de pontos do outro time está fixado em 28. Faça seu
+				programa perguntar quantas vitórias e empates o outro time também possui e
+				utilize essas informações para calcular sua pontuação. Para isso, você fará mais
+				duas perguntas com prompt e calculará uma nova variável pontos_adversario .
+
+				2) Crie uma função calculaPontos que recebe o número de vitorias e de empates ,
+				retornando o total de pontos. Declare-a no topo do seu código, dessa forma:
+
+				var calculaPontos = function(vitorias, empates) {
+					return (vitorias * 3) + empates;
+				};
+
+				Agora altere o restante do seu código para que ele passe a utilizá-la, em vez de
+				escrever o cálculo toda vez. Perceba que você deve já passar os empates depois de
+				ter aplicado o parseInt na variável que você pegou do prompt .
+
+				3) E se a regra do campeonato brasileiro mudasse? Para deixar os times mais agres-
+				sivos, uma derrota poderia valer -1 ponto. Altere seu programa para que isso
+				seja contabilizado. Para isso, você vai precisar perguntar também o número de
+				derrotas do nosso time.
+			</p-->
+
+				<script>
+				// Função pula linha
+				var pulaLinha = function() {
+						document.write("<br>");
+				};
+
+				// Mostrar frase
+				var mostra = function(frase) {
+						document.write(frase);
+						pulaLinha();
+				}
+
+				// Calcular pontos do primeiro time
+				var calculaPontos = function(vitorias, empates) {
+					return (vitorias * 3) + parseInt(empates);
+				};
+
+				// Calcular pontos do time adversário
+				var calculaPontosAdv = function(vitorias_adv, empates_adv) {
+					return (vitorias_adv * 3) + parseInt(empates_adv);
+				};
+
+
+				var time_futebol = prompt("Nome do time 1: ");
+				var time_futebol_adv = prompt("Nome do time 2: ");
+				var vitorias = prompt("Quantos jogos o " + time_futebol + " venceu?");
+				var empates = prompt("Quantos jogos o " + time_futebol + " empatou?");
+				var derrotas = prompt("Quantos jogos o " + time_futebol + " perdeu?");
+
+				var vitorias_adv = prompt("Quantos jogos o " + time_futebol_adv + " venceu?");
+				var empates_adv = prompt("Quantos jogos o " + time_futebol_adv + " empatou?");
+				var derrotas_adv = prompt("Quantos jogos o " + time_futebol_adv + " perdeu?");
+
+				var pontos = calculaPontos;
+				var pontos_adv = calculaPontosAdv;
+
+				mostra("Derrotas valem menos um ponto.")
+				mostra("Derrotas time principal: " + derrotas);
+				mostra("Derrotas time adversário: " + derrotas_adv);
+
+				// Condição para calcular as derrotas de um time
+				// Time 1
+				if (derrotas == 0) {
+					mostra("Total de pontos do time principal: " + pontos);
+				} else {
+					mostra("Pontos time principal: " + (pontos - derrotas));
+				}
+
+				// Time 2
+				if (derrotas_adv == 0) {
+					mostra("Total de pontos do time adversário: " + pontos_adv);
+				} else {
+					mostra("Pontos time adversário: " + (pontos_adv - derrotas_adv));
+				}
+
+				// Status do time
+				if (pontos > pontos_adv) {
+					mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+				} else if (pontos < pontos_adv) {
+					mostra("Nosso time está indo PIOR que o Livros Velhos!");
+				} else if (pontos == pontos_adv) {
+					mostra("Nosso time está EMPATADO com os Livros Velhos!");
+				}
+
+        </script>
+	</body>
+</html>
