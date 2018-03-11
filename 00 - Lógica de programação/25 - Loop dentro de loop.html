@@ -8,21 +8,21 @@
 	</head>
 
 	<body>
-        <h1>Loop dentro de loop</h1>
-        <script>
-						// Mostrar frase
-						var mostra = function(frase) {
-								document.write(frase + "<br>");
-						}
+    <h1>Loop dentro de loop</h1>
+    <script>
+				// Mostrar frase
+				var mostra = function(frase) {
+					document.write(frase + "<br>");
+				}
 
-						var tamanho = prompt("Qual o tamanho do quadrado você deseja criar? ");
+			var tamanho = prompt("Qual o tamanho do quadrado você deseja criar? ");
 
-						for(var line = 0; line < tamanho; line++){
-							for (var column = 0; column < tamanho; column++){
-									mostra("**********");
-							}
-							mostra("**********");
-						}
-        </script>
+			for(var line = 0; line < tamanho; line++){
+					for (var column = 0; column < tamanho; column++){
+					mostra("**********");
+				}
+					mostra("**********");
+			}
+    </script>
 	</body>
 </html>

@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Mouse</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Mouse</h1>
+				<canvas id="screen" width="600" height="400"></canvas>
+
+				<script>
+						var screen = document.getElementById("screen");
+						var c = screen.getContext("2d");
+
+						c.fillStyle = "gray";
+						c.fillRect(0, 0, 600, 400);
+
+						//screen.onmousemove
+						screen.onclick = function(evento) {
+							var x = evento.pageX - screen.offsetLeft;
+							var y = evento.pageY - screen.offsetTop;
+
+							c.fillStyle="blue";
+							c.beginPath();
+							c.arc(x, y, 10, 0, 2*3.14);
+							c.fill();
+
+							console.log("posição do clique: " + x + ", " + y);
+						}
+				</script>
+	</body>
+</html>

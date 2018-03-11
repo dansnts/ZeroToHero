@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Drawing with canvas</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Drawning with canvas</h1>
+				<canvas id="screen" width="600" height="400"></canvas>
+
+				<script>
+					var screen = document.getElementById('screen');
+					var c = screen.getContext("2d");
+
+					c.fillStyle = "green";
+					c.fillRect (0, 0, 200, 400);
+
+					c.fillStyle = "red";
+					c.fillRect (400, 0, 200, 400);
+				</script>
+	</body>
+</html>

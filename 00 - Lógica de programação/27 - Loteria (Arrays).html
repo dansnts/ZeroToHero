@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Arrays</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Loteria</h1>
+				<input type="text" id="num" />
+				<input type="submit" id="adivinhar" value="Compare com o meu segredo!" />
+        <script>
+						// Mostrar frase
+						//var mostra = function(frase) {
+						//		document.write(frase + "<br>");
+						//}
+						var secrets = [16, 34, 78, 95, 224, 70];
+						var caixaDoNumero = document.getElementById("num");
+
+						var botaoClicado = function() {
+							for(var i = 0; i < secrets.length; i = i + 1) {
+								if(secrets[i] == caixaDoNumero.value) {
+									alert("Acertou mizerávi!")
+									return;
+								}
+								alert("Errooou!");
+							}
+
+							// Limpa o número do input text
+							caixaDoNumero.value = "";
+						};
+
+						var botaoAdivinhar = document.getElementById("adivinhar");
+						botaoAdivinhar.onclick = botaoClicado;
+        </script>
+	</body>
+</html>

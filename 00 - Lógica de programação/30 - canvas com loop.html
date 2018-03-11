@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Drawing with canvas</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+	</head>
+
+	<body>
+        <h1>Drawing with canvas in loop</h1>
+				<canvas id="screen" width="600" height="400"></canvas>
+
+				<script>
+					var QuadVerde = function(x, y) {
+						var screen = document.getElementById("screen");
+						var c = screen.getContext("2d");
+
+						c.fillStyle = "green";
+						c.fillRect (x, y, 50, 50);
+
+						c.strokeStyle="white";
+						c.strokeRect(x, y, 50, 50);
+					}
+
+					var QuadRed = function(x, y) {
+						var screen = document.getElementById("screen");
+						var c = screen.getContext("2d");
+
+						c.fillStyle = "red";
+						c.fillRect (x, y, 50, 50);
+
+						c.strokeStyle="white";
+						c.strokeRect(x, y, 50, 50);
+					}
+
+					for (var x = 0; x < 600; x = x + 50) {
+						QuadVerde(x, 0);
+						QuadRed(x, 50);
+					}
+
+				</script>
+	</body>
+</html>
